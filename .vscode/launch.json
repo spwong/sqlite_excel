@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'rust_excel_to_sqlite'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rust_excel_to_sqlite",
+                    "--package=rust_excel_to_sqlite"
+                ],
+                "filter": {
+                    "name": "rust_excel_to_sqlite",
+                    "kind": "bin"
+                }
+            },
+            "args": ["--export", "D:\\uzone\\modified\\Survey2020_euc.db","D:\\uzone\\modified\\Survey2020_euc.xlsx" ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'rust_excel_to_sqlite'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=rust_excel_to_sqlite",
+                    "--package=rust_excel_to_sqlite"
+                ],
+                "filter": {
+                    "name": "rust_excel_to_sqlite",
+                    "kind": "bin"
+                }
+            },
+            "args": ["--export", "D:\\uzone\\modified\\Survey2020_euc.db","D:\\uzone\\modified\\Survey2020_euc.xlsx" ],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
